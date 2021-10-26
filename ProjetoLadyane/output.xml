@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20211026 16:21:19.864" rpa="false" schemaversion="2">
+<suite id="s1" name="Desafio 1" source="C:\Users\Thiago Loreto\Documents\ProjetoLadyane\Desafio_1.robot">
+<test id="s1-t1" name="Validar acesso ao blog HypeFlame">
+<kw name="Acessar blog HypeFlame" library="DesafioResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211026 16:21:20.694" level="INFO">Opening browser 'firefox' to base url 'https://hypeflame.blog/'.</msg>
+<msg timestamp="20211026 16:21:20.701" level="INFO">Firefox driver log is always forced to to: C:\Users\Thiago Loreto\Documents\ProjetoLadyane\geckodriver-12.log</msg>
+<status status="PASS" starttime="20211026 16:21:20.694" endtime="20211026 16:21:43.510"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>HypeFlame -</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211026 16:21:43.516" level="INFO">Page title is 'HypeFlame -'.</msg>
+<status status="PASS" starttime="20211026 16:21:43.511" endtime="20211026 16:21:43.516"/>
+</kw>
+<status status="PASS" starttime="20211026 16:21:20.693" endtime="20211026 16:21:43.518"/>
+</kw>
+<status status="PASS" starttime="20211026 16:21:20.692" endtime="20211026 16:21:43.549"/>
+</test>
+<test id="s1-t2" name="Validar redes sociais">
+<kw name="Abrir Linkedin" library="DesafioResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_LINKEDIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211026 16:21:43.556" level="INFO">Clicking element 'xpath=.//*[@id="menu-item-413"]/a/svg/path'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211026 16:21:44.783" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211026 16:21:43.818" endtime="20211026 16:21:44.783"/>
+</kw>
+<msg timestamp="20211026 16:21:44.877" level="FAIL">Element with locator 'xpath=.//*[@id="menu-item-413"]/a/svg/path' not found.</msg>
+<status status="FAIL" starttime="20211026 16:21:43.553" endtime="20211026 16:21:44.877"/>
+</kw>
+<status status="FAIL" starttime="20211026 16:21:43.553" endtime="20211026 16:21:44.878"/>
+</kw>
+<kw name="Abrir Instagram">
+<status status="NOT RUN" starttime="20211026 16:21:44.899" endtime="20211026 16:21:44.899"/>
+</kw>
+<status status="FAIL" starttime="20211026 16:21:43.551" endtime="20211026 16:21:44.911">Element with locator 'xpath=.//*[@id="menu-item-413"]/a/svg/path' not found.</status>
+</test>
+<kw name="Fechar Navegador" library="DesafioResource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211026 16:21:44.927" endtime="20211026 16:21:49.408"/>
+</kw>
+<status status="PASS" starttime="20211026 16:21:44.926" endtime="20211026 16:21:49.408"/>
+</kw>
+<status status="FAIL" starttime="20211026 16:21:19.901" endtime="20211026 16:21:49.408"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Desafio 1">Desafio 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
